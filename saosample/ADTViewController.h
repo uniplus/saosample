@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SAOContextMenuView.h"
 
 @interface ADTViewController : UIViewController
-
+{
+    SAOContextMenuView* _horizontalContextMenu;
+    SAOContextMenuView* _verticalContextMenu;
+    
+    BOOL _showContextMenu;
+}
 @end
