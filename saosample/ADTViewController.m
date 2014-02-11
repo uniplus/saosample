@@ -173,9 +173,28 @@
     }
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:key message:[NSString stringWithFormat:@"tap index %d",index] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alertView show];
+    [self performSelector:@selector(hideContextMenu) withObject:nil afterDelay:0.3];
 }
 
 #pragma mark -
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    NSLog(@"touch               [%@]",[touch view]);
+    NSLog(@"gestureRecognizer   [%@]",gestureRecognizer);
+    if([touch.view isKindOfClass:[UITableViewCell class]]) {
+        return NO;
+    }
+    // UITableViewCellContentView => UITableViewCell
+    if([touch.view.superview isKindOfClass:[UITableViewCell class]]) {
+        return NO;
+    }
+    // UITableViewCellContentView => UITableViewCellScrollView => UITableViewCell
+    if([touch.view.superview.superview isKindOfClass:[UITableViewCell class]]) {
+        return NO;
+    }
+    return YES;
+}
+
 -(BOOL)isLandscape
 {
     UIInterfaceOrientation orientation =(UIInterfaceOrientation)[UIApplication sharedApplication].statusBarOrientation;
