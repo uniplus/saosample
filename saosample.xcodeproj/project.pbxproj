@@ -12,9 +12,9 @@
 		751BF3A218AA8AF900237CCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BF3A118AA8AF900237CCC /* UIKit.framework */; };
 		751BF3A818AA8AF900237CCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3A618AA8AF900237CCC /* InfoPlist.strings */; };
 		751BF3AA18AA8AF900237CCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3A918AA8AF900237CCC /* main.m */; };
-		751BF3AE18AA8AF900237CCC /* ADTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3AD18AA8AF900237CCC /* ADTAppDelegate.m */; };
+		751BF3AE18AA8AF900237CCC /* SVFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3AD18AA8AF900237CCC /* SVFAppDelegate.m */; };
 		751BF3B118AA8AF900237CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3AF18AA8AF900237CCC /* Main.storyboard */; };
-		751BF3B418AA8AF900237CCC /* ADTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3B318AA8AF900237CCC /* ADTViewController.m */; };
+		751BF3B418AA8AF900237CCC /* SVFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3B318AA8AF900237CCC /* SVFViewController.m */; };
 		751BF3B618AA8AF900237CCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3B518AA8AF900237CCC /* Images.xcassets */; };
 		751BF3BD18AA8AF900237CCC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BF3BC18AA8AF900237CCC /* XCTest.framework */; };
 		751BF3BE18AA8AF900237CCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BF39D18AA8AF900237CCC /* Foundation.framework */; };
@@ -47,11 +47,11 @@
 		751BF3A718AA8AF900237CCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		751BF3A918AA8AF900237CCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		751BF3AB18AA8AF900237CCC /* saosample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "saosample-Prefix.pch"; sourceTree = "<group>"; };
-		751BF3AC18AA8AF900237CCC /* ADTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTAppDelegate.h; sourceTree = "<group>"; };
-		751BF3AD18AA8AF900237CCC /* ADTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTAppDelegate.m; sourceTree = "<group>"; };
+		751BF3AC18AA8AF900237CCC /* SVFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVFAppDelegate.h; sourceTree = "<group>"; };
+		751BF3AD18AA8AF900237CCC /* SVFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVFAppDelegate.m; sourceTree = "<group>"; };
 		751BF3B018AA8AF900237CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		751BF3B218AA8AF900237CCC /* ADTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADTViewController.h; sourceTree = "<group>"; };
-		751BF3B318AA8AF900237CCC /* ADTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADTViewController.m; sourceTree = "<group>"; };
+		751BF3B218AA8AF900237CCC /* SVFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVFViewController.h; sourceTree = "<group>"; };
+		751BF3B318AA8AF900237CCC /* SVFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVFViewController.m; sourceTree = "<group>"; };
 		751BF3B518AA8AF900237CCC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		751BF3BB18AA8AF900237CCC /* saosampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = saosampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		751BF3BC18AA8AF900237CCC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				751BF3D218AA8B0100237CCC /* SAO */,
-				751BF3AC18AA8AF900237CCC /* ADTAppDelegate.h */,
-				751BF3AD18AA8AF900237CCC /* ADTAppDelegate.m */,
+				751BF3AC18AA8AF900237CCC /* SVFAppDelegate.h */,
+				751BF3AD18AA8AF900237CCC /* SVFAppDelegate.m */,
 				751BF3AF18AA8AF900237CCC /* Main.storyboard */,
-				751BF3B218AA8AF900237CCC /* ADTViewController.h */,
-				751BF3B318AA8AF900237CCC /* ADTViewController.m */,
+				751BF3B218AA8AF900237CCC /* SVFViewController.h */,
+				751BF3B318AA8AF900237CCC /* SVFViewController.m */,
 				751BF3B518AA8AF900237CCC /* Images.xcassets */,
 				751BF3A418AA8AF900237CCC /* Supporting Files */,
 			);
@@ -233,9 +233,9 @@
 		751BF39218AA8AF900237CCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ADT;
+				CLASSPREFIX = SVF;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "秋山 高弘";
+				ORGANIZATIONNAME = "Silver Frontier";
 				TargetAttributes = {
 					751BF3BA18AA8AF900237CCC = {
 						TestTargetID = 751BF39918AA8AF900237CCC;
@@ -290,11 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				751BF3DA18AA8B2400237CCC /* SAOContextMenuView.m in Sources */,
-				751BF3AE18AA8AF900237CCC /* ADTAppDelegate.m in Sources */,
+				751BF3AE18AA8AF900237CCC /* SVFAppDelegate.m in Sources */,
 				751BF3DB18AA8B2400237CCC /* CircleView.m in Sources */,
 				751BF3AA18AA8AF900237CCC /* main.m in Sources */,
 				751BF3D918AA8B2400237CCC /* GenerateImageUtil.m in Sources */,
-				751BF3B418AA8AF900237CCC /* ADTViewController.m in Sources */,
+				751BF3B418AA8AF900237CCC /* SVFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +505,7 @@
 				751BF3CE18AA8AF900237CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		751BF3CF18AA8AF900237CCC /* Build configuration list for PBXNativeTarget "saosampleTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				751BF3D118AA8AF900237CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

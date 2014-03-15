@@ -1,20 +1,20 @@
 //
-//  ADTViewController.m
+//  SVFViewController.m
 //  saosample
 //
 //  Created by 秋山 高弘 on 2014/02/12.
-//  Copyright (c) 2014年 秋山 高弘. All rights reserved.
+//  Copyright (c) 2014年 Silver Frontier. All rights reserved.
 //
 
-#import "ADTViewController.h"
+#import "SVFViewController.h"
 #import "SAOContextMenuView.h"
 #import "GenerateImageUtil.h"
 
-@interface ADTViewController ()
+@interface SVFViewController ()
 
 @end
 
-@implementation ADTViewController
+@implementation SVFViewController
 
 - (void)viewDidLoad
 {
@@ -68,10 +68,10 @@
         [_horizontalContextMenu addItemWithTitle:@"項目４"   forKey:@"menu4"];
         [_horizontalContextMenu addItemWithTitle:@"項目５"   forKey:@"menu5"];
         
-        UIImage* image1 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#FFEF00" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image2 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#B4F617" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image3 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#86BEFF" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image4 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#F87EDB" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image1 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#FFEF00" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image2 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#B4F617" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image3 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#86BEFF" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image4 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#F87EDB" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
         
         [_horizontalContextMenu addSubMenuItemWithTitle:@"イエロー" icon:image1 forKey:@"menu1"];
         [_horizontalContextMenu addSubMenuItemWithTitle:@"グリーン" icon:image2 forKey:@"menu1"];
@@ -108,10 +108,10 @@
         [_verticalContextMenu addItemWithTitle:@"３"   forKey:@"menu3"];
         [_verticalContextMenu addItemWithTitle:@"４"   forKey:@"menu4"];
         
-        UIImage* image1 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#FFEF00" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image2 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#B4F617" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image3 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#86BEFF" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
-        UIImage* image4 = [GenerateImageUtil imageForCircle:[ADTViewController colorWithHex:@"#F87EDB" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image1 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#FFEF00" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image2 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#B4F617" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image3 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#86BEFF" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
+        UIImage* image4 = [GenerateImageUtil imageForCircle:[SVFViewController colorWithHex:@"#F87EDB" alpha:1.0f] rect:CGRectMake(0, 0, 20, 20)];
         
         [_verticalContextMenu addSubMenuItemWithTitle:@"イエロー" icon:image1 forKey:@"menu1"];
         [_verticalContextMenu addSubMenuItemWithTitle:@"グリーン" icon:image2 forKey:@"menu1"];

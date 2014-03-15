@@ -1,14 +1,14 @@
 //
-//  ADTAppDelegate.m
+//  SVFAppDelegate.m
 //  saosample
 //
 //  Created by 秋山 高弘 on 2014/02/12.
-//  Copyright (c) 2014年 秋山 高弘. All rights reserved.
+//  Copyright (c) 2014年 Silver Frontier. All rights reserved.
 //
 
-#import "ADTAppDelegate.h"
+#import "SVFAppDelegate.h"
 
-@implementation ADTAppDelegate
+@implementation SVFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
