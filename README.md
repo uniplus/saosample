@@ -34,11 +34,11 @@ http://zzram.blog97.fc2.com/
 ----------------
 縦メニュー
 
-![Image](https://dl.dropboxusercontent.com/u/48819432/images_github/sao_contextimage_h.png)
+![Image](https://dl.dropboxusercontent.com/u/48819432/images_github/sao_contextimage_h_s.jpg)
 
 横メニュー
 
-![Image](https://dl.dropboxusercontent.com/u/48819432/images_github/sao_contextimage_v.png)
+![Image](https://dl.dropboxusercontent.com/u/48819432/images_github/sao_contextimage_v_s.jpg)
  
 ライセンス
 ----------
