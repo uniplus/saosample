@@ -70,7 +70,7 @@
     for (NSDictionary* dict in _menuItems) {
         NSLog(@"dict[%@]",dict);
         SVFCircleView* itemBtn=nil;
-        itemBtn = [self createMenuBtn:CGRectMake(0, offsetY, itemSize, itemSize) icon:[dict objectForKey:@"icon"] title:[dict objectForKey:@"title"] forKey:[dict objectForKey:@"key"]];
+        itemBtn = [SVFCircleView circleViewWithRect:CGRectMake(0, offsetY, itemSize, itemSize) icon:[dict objectForKey:@"icon"] title:[dict objectForKey:@"title"] forKey:[dict objectForKey:@"key"] textColor:[UIColor whiteColor] selectedColor:[UIColor orangeColor]];
         if (itemBtn) {
             [self addSubview:itemBtn];
             offsetY += itemSize + padding;
@@ -81,21 +81,6 @@
     }
     
     [self createSubMenu];
-}
-
--(SVFCircleView*)createMenuBtn:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key;
-{
-    if (title) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title forKey:key];
-        circleBtn.selectedCircleColor = [UIColor orangeColor];
-        return circleBtn;
-    }
-    if (icon) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
-        circleBtn.selectedCircleColor = [UIColor orangeColor];
-        return circleBtn;
-    }
-    return nil;
 }
 
 -(void)hideMenu

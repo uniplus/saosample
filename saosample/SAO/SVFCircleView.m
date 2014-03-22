@@ -15,20 +15,45 @@
 //    [_circleColor release],_circleColor=nil;
 //    [_keyStr release],_keyStr=nil;
 //    [_icon release],_icon=nil;
-//    
+//
 //    [super dealloc];
 //}
-
-- (id)initWithFrame:(CGRect)frame color:(UIColor*)color forKey:(NSString *)key
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        _circleColor    = color;
-        _keyStr         = key;
-        self.backgroundColor = [UIColor clearColor];
+    if (title) {
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title textColor:textColor forKey:key];
+        circleBtn.selectedCircleColor = color;
+        circleBtn.selectedTextColor = textColor;
+        return circleBtn;
     }
-    return self;
+    if (icon) {
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
+        circleBtn.selectedCircleColor = color;
+        circleBtn.selectedTextColor = textColor;
+        return circleBtn;
+    }
+    return nil;
+}
+
++(SVFCircleView*)circleViewWithRect:(CGRect)rect title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color
+{
+    if (title) {
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title textColor:textColor forKey:key];
+        circleBtn.selectedCircleColor = color;
+        circleBtn.selectedTextColor = textColor;
+        return circleBtn;
+    }
+    return nil;
+}
+
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon forKey:(NSString*)key selectedColor:(UIColor*)color
+{
+    if (icon) {
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
+        circleBtn.selectedCircleColor = color;
+        return circleBtn;
+    }
+    return nil;
 }
 
 - (id)initWithFrame:(CGRect)frame color:(UIColor*)color icon:(UIImage*)icon forKey:(NSString *)key
@@ -44,12 +69,13 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame color:(UIColor*)color title:(NSString*)title forKey:(NSString *)key
+- (id)initWithFrame:(CGRect)frame color:(UIColor*)color title:(NSString*)title textColor:(UIColor*)textColor forKey:(NSString *)key
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         _title          = title;
+        _textColor      = textColor;
         _circleColor    = color;
         _keyStr         = key;
         self.backgroundColor = [UIColor clearColor];
@@ -67,10 +93,10 @@
     UIColor* textColor=nil;
     if (_selected) {
         bgColor     = _selectedCircleColor;
-        textColor   = [UIColor whiteColor];
+        textColor   = _selectedTextColor;
     } else {
         bgColor     = _circleColor;
-        textColor   = [UIColor grayColor];
+        textColor   = _textColor;
     }
     
     //CGContextAddEllipseInRect(context,  rect);
@@ -109,7 +135,7 @@
         CGContextSetLineWidth       (context, 1.0);
         CGContextStrokeEllipseInRect(context, rectEllipse);
     }
-
+    
     {   //icon を描画
         if (_icon) {
             NSLog(@"_icon[%@]",NSStringFromCGSize(_icon.size));
