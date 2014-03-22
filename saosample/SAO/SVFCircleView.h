@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CircleView : UIView
+@interface SVFCircleView : UIView
 {
     UIColor* _circleColor;
     UIImage* _icon;

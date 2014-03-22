@@ -21,11 +21,12 @@
 		751BF3BF18AA8AF900237CCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BF3A118AA8AF900237CCC /* UIKit.framework */; };
 		751BF3C718AA8AF900237CCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3C518AA8AF900237CCC /* InfoPlist.strings */; };
 		751BF3C918AA8AF900237CCC /* saosampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3C818AA8AF900237CCC /* saosampleTests.m */; };
-		751BF3D918AA8B2400237CCC /* GenerateImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3D418AA8B2400237CCC /* GenerateImageUtil.m */; };
+		751BF3D918AA8B2400237CCC /* SVFGenerateImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3D418AA8B2400237CCC /* SVFGenerateImageUtil.m */; };
 		751BF3DA18AA8B2400237CCC /* SAOContextMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3D618AA8B2400237CCC /* SAOContextMenuView.m */; };
-		751BF3DB18AA8B2400237CCC /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3D818AA8B2400237CCC /* CircleView.m */; };
+		751BF3DB18AA8B2400237CCC /* SVFCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751BF3D818AA8B2400237CCC /* SVFCircleView.m */; };
 		751BF3E218AA9A6C00237CCC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3E018AA9A6C00237CCC /* settings.png */; };
 		751BF3E318AA9A6C00237CCC /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 751BF3E118AA9A6C00237CCC /* settings@2x.png */; };
+		7590959718DD6E0300C2D1A7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7590959618DD6E0300C2D1A7 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +59,15 @@
 		751BF3C418AA8AF900237CCC /* saosampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "saosampleTests-Info.plist"; sourceTree = "<group>"; };
 		751BF3C618AA8AF900237CCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		751BF3C818AA8AF900237CCC /* saosampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = saosampleTests.m; sourceTree = "<group>"; };
-		751BF3D318AA8B2400237CCC /* GenerateImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateImageUtil.h; sourceTree = "<group>"; };
-		751BF3D418AA8B2400237CCC /* GenerateImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateImageUtil.m; sourceTree = "<group>"; };
+		751BF3D318AA8B2400237CCC /* SVFGenerateImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVFGenerateImageUtil.h; sourceTree = "<group>"; };
+		751BF3D418AA8B2400237CCC /* SVFGenerateImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVFGenerateImageUtil.m; sourceTree = "<group>"; };
 		751BF3D518AA8B2400237CCC /* SAOContextMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAOContextMenuView.h; sourceTree = "<group>"; };
 		751BF3D618AA8B2400237CCC /* SAOContextMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAOContextMenuView.m; sourceTree = "<group>"; };
-		751BF3D718AA8B2400237CCC /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
-		751BF3D818AA8B2400237CCC /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		751BF3D718AA8B2400237CCC /* SVFCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVFCircleView.h; sourceTree = "<group>"; };
+		751BF3D818AA8B2400237CCC /* SVFCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVFCircleView.m; sourceTree = "<group>"; };
 		751BF3E018AA9A6C00237CCC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		751BF3E118AA9A6C00237CCC /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		7590959618DD6E0300C2D1A7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		751BF39118AA8AF900237CCC = {
 			isa = PBXGroup;
 			children = (
+				7590959618DD6E0300C2D1A7 /* Default-568h@2x.png */,
 				751BF3DF18AA9A0300237CCC /* Resources */,
 				751BF3A318AA8AF900237CCC /* saosample */,
 				751BF3C218AA8AF900237CCC /* saosampleTests */,
@@ -170,12 +173,12 @@
 		751BF3D218AA8B0100237CCC /* SAO */ = {
 			isa = PBXGroup;
 			children = (
-				751BF3D318AA8B2400237CCC /* GenerateImageUtil.h */,
-				751BF3D418AA8B2400237CCC /* GenerateImageUtil.m */,
+				751BF3D318AA8B2400237CCC /* SVFGenerateImageUtil.h */,
+				751BF3D418AA8B2400237CCC /* SVFGenerateImageUtil.m */,
 				751BF3D518AA8B2400237CCC /* SAOContextMenuView.h */,
 				751BF3D618AA8B2400237CCC /* SAOContextMenuView.m */,
-				751BF3D718AA8B2400237CCC /* CircleView.h */,
-				751BF3D818AA8B2400237CCC /* CircleView.m */,
+				751BF3D718AA8B2400237CCC /* SVFCircleView.h */,
+				751BF3D818AA8B2400237CCC /* SVFCircleView.m */,
 			);
 			path = SAO;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				751BF3B618AA8AF900237CCC /* Images.xcassets in Resources */,
 				751BF3A818AA8AF900237CCC /* InfoPlist.strings in Resources */,
 				751BF3B118AA8AF900237CCC /* Main.storyboard in Resources */,
+				7590959718DD6E0300C2D1A7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +295,9 @@
 			files = (
 				751BF3DA18AA8B2400237CCC /* SAOContextMenuView.m in Sources */,
 				751BF3AE18AA8AF900237CCC /* SVFAppDelegate.m in Sources */,
-				751BF3DB18AA8B2400237CCC /* CircleView.m in Sources */,
+				751BF3DB18AA8B2400237CCC /* SVFCircleView.m in Sources */,
 				751BF3AA18AA8AF900237CCC /* main.m in Sources */,
-				751BF3D918AA8B2400237CCC /* GenerateImageUtil.m in Sources */,
+				751BF3D918AA8B2400237CCC /* SVFGenerateImageUtil.m in Sources */,
 				751BF3B418AA8AF900237CCC /* SVFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

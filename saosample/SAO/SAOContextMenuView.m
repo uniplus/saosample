@@ -7,8 +7,8 @@
 //
 
 #import "SAOContextMenuView.h"
-#import "CircleView.h"
-#import "GenerateImageUtil.h"
+#import "SVFCircleView.h"
+#import "SVFGenerateImageUtil.h"
 
 @implementation SAOContextMenuView
 
@@ -69,7 +69,7 @@
     
     for (NSDictionary* dict in _menuItems) {
         NSLog(@"dict[%@]",dict);
-        CircleView* itemBtn=nil;
+        SVFCircleView* itemBtn=nil;
         itemBtn = [self createMenuBtn:CGRectMake(0, offsetY, itemSize, itemSize) icon:[dict objectForKey:@"icon"] title:[dict objectForKey:@"title"] forKey:[dict objectForKey:@"key"]];
         if (itemBtn) {
             [self addSubview:itemBtn];
@@ -83,15 +83,15 @@
     [self createSubMenu];
 }
 
--(CircleView*)createMenuBtn:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key;
+-(SVFCircleView*)createMenuBtn:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key;
 {
     if (title) {
-        CircleView* circleBtn = [[CircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title forKey:key];
         circleBtn.selectedCircleColor = [UIColor orangeColor];
         return circleBtn;
     }
     if (icon) {
-        CircleView* circleBtn = [[CircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
         circleBtn.selectedCircleColor = [UIColor orangeColor];
         return circleBtn;
     }
@@ -142,8 +142,8 @@
     // 選択解除
     [self selectedItemWithKey:nil];
     
-    for (CircleView* subView in [self subviews]) {
-        if ([subView isKindOfClass:[CircleView class]]) {
+    for (SVFCircleView* subView in [self subviews]) {
+        if ([subView isKindOfClass:[SVFCircleView class]]) {
             CGRect startRect=subView.frame;
             startRect.origin.y = -startRect.size.height;
             startRect.origin.x = offsetX;
@@ -227,7 +227,7 @@
 
 -(void)singeTapAction:(UIGestureRecognizer*)sender
 {
-    CircleView* touchView = (id)[sender view];
+    SVFCircleView* touchView = (id)[sender view];
     CGPoint touchPoint = [sender locationInView:self.superview];
     NSString* key = touchView.keyStr;
     [self selectedItemWithKey:key];
@@ -250,8 +250,8 @@
 
 -(void)selectedItemWithKey:(NSString*)key
 {
-    for (CircleView* subView in [self subviews]) {
-        if ([subView isKindOfClass:[CircleView class]]) {
+    for (SVFCircleView* subView in [self subviews]) {
+        if ([subView isKindOfClass:[SVFCircleView class]]) {
             if ([subView.keyStr isEqualToString:key]) {
                 subView.selected=YES;
             } else {
@@ -263,7 +263,7 @@
     [self setNeedsDisplay];
 }
 
--(void)deselectedItemWithKey:(CircleView*)targetView
+-(void)deselectedItemWithKey:(SVFCircleView*)targetView
 {
     targetView.selected=NO;
     [targetView setNeedsDisplay];
@@ -305,14 +305,14 @@
     
     if (_isVertical) {
         {
-            UIImage* image = [GenerateImageUtil imageForRightArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 10.0f, 20.0f)];
+            UIImage* image = [SVFGenerateImageUtil imageForRightArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 10.0f, 20.0f)];
             _rightArrow = [[UIImageView alloc] initWithImage:image];
             [_subMenuView addSubview:_rightArrow];
             CGPoint point = CGPointMake(_subMenuView.frame.size.width+5.0f, _subMenuView.frame.size.height*0.5f);
             _rightArrow.center = point;
         }
         {
-            UIImage* image = [GenerateImageUtil imageForLeftArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 10.0f, 20.0f)];
+            UIImage* image = [SVFGenerateImageUtil imageForLeftArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 10.0f, 20.0f)];
             _leftArrow = [[UIImageView alloc] initWithImage:image];
             [_subMenuView addSubview:_leftArrow];
             CGPoint point = CGPointMake(-5.0f, _subMenuView.frame.size.height*0.5f);
@@ -320,14 +320,14 @@
         }
     } else {
         {
-            UIImage* image = [GenerateImageUtil imageForDOWNArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 20.0f, 10.0f)];
+            UIImage* image = [SVFGenerateImageUtil imageForDOWNArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 20.0f, 10.0f)];
             _downArrow = [[UIImageView alloc] initWithImage:image];
             [_subMenuView addSubview:_downArrow];
             CGPoint point = CGPointMake(_subMenuView.frame.size.width*0.5, _subMenuView.frame.size.height+5.0f);
             _downArrow.center = point;
         }
         {
-            UIImage* image = [GenerateImageUtil imageForUPArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 20.0f, 10.0f)];
+            UIImage* image = [SVFGenerateImageUtil imageForUPArrow:[UIColor orangeColor] rect:CGRectMake(0.0f, 0.0f, 20.0f, 10.0f)];
             _upArrow = [[UIImageView alloc] initWithImage:image];
             [_subMenuView addSubview:_upArrow];
             CGPoint point = CGPointMake(_subMenuView.frame.size.width*0.5, -5.0f);

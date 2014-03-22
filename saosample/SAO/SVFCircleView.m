@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 Silver Frontier. All rights reserved.
 //
 
-#import "CircleView.h"
+#import "SVFCircleView.h"
 
-@implementation CircleView
+@implementation SVFCircleView
 
 //-(void)dealloc
 //{

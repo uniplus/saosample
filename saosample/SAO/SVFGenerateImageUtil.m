@@ -1,18 +1,18 @@
 //
-//  GenerateImageUtil.m
-//  saosample
+//  SVFGenerateImageUtil.m
+//  simplefigure
 //
 //  Created by 秋山 高弘 on 2014/02/06.
 //  Copyright (c) 2014年 Silver Frontier. All rights reserved.
 //
 
-#import "GenerateImageUtil.h"
+#import "SVFGenerateImageUtil.h"
 
-@implementation GenerateImageUtil
+@implementation SVFGenerateImageUtil
 
 + (UIImage *)imageWithColor:(UIColor *)color rect:(CGRect)rect cornerRadius:(float)cornerRadius
 {
-    UIImage* image = [GenerateImageUtil imageWithColor:color rect:rect];
+    UIImage* image = [SVFGenerateImageUtil imageWithColor:color rect:rect];
     CALayer *imageLayer = [CALayer layer];
     imageLayer.frame            = rect;
     imageLayer.contents         = (id) image.CGImage;
@@ -138,6 +138,8 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetFillColorWithColor  (context, [color CGColor]);
+    CGContextSetStrokeColorWithColor(context, [color CGColor]);
+    
     CGContextSetLineWidth           (context, lineWidth);
     CGContextSetLineCap             (context, kCGLineCapRound);
     
@@ -166,6 +168,8 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetFillColorWithColor  (context, [color CGColor]);
+    CGContextSetStrokeColorWithColor(context, [color CGColor]);
+    
     CGContextSetLineWidth           (context, lineWidth);
     CGContextSetLineCap             (context, kCGLineCapRound);
     
