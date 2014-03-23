@@ -18,16 +18,16 @@
 //
 //    [super dealloc];
 //}
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor
 {
     if (title) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title textColor:textColor forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:cirecleColor title:title textColor:textColor forKey:key];
         circleBtn.selectedCircleColor = color;
         circleBtn.selectedTextColor = textColor;
         return circleBtn;
     }
     if (icon) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:cirecleColor icon:icon forKey:key];
         circleBtn.selectedCircleColor = color;
         circleBtn.selectedTextColor = textColor;
         return circleBtn;
@@ -35,10 +35,10 @@
     return nil;
 }
 
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color
++(SVFCircleView*)circleViewWithRect:(CGRect)rect title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor
 {
     if (title) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] title:title textColor:textColor forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:cirecleColor title:title textColor:textColor forKey:key];
         circleBtn.selectedCircleColor = color;
         circleBtn.selectedTextColor = textColor;
         return circleBtn;
@@ -46,10 +46,10 @@
     return nil;
 }
 
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon forKey:(NSString*)key selectedColor:(UIColor*)color
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon forKey:(NSString*)key selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor
 {
     if (icon) {
-        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:[UIColor darkGrayColor] icon:icon forKey:key];
+        SVFCircleView* circleBtn = [[SVFCircleView alloc] initWithFrame:rect color:cirecleColor icon:icon forKey:key];
         circleBtn.selectedCircleColor = color;
         return circleBtn;
     }
@@ -112,29 +112,28 @@
     //円の範囲
     CGRect rectEllipse = CGRectMake(cx - R, cy - R, R * 2,  R * 2);
     
-    // Drawing code
-    // 円を描画
+    //    // Drawing code
+    //    // 円を描画
     CGContextSetFillColorWithColor(context, bgColor.CGColor);
-    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-    CGContextSetLineWidth(context, 1.0);
+    //    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+    //    CGContextSetLineWidth(context, 1.0);
     
     //円の範囲
     CGContextFillEllipseInRect(context, rectEllipse);
     
+    //    //円の線を描画
+    //    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+    //    CGContextSetLineWidth(context, 1.0);
     
-    //円の線を描画
-    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-    CGContextSetLineWidth(context, 1.0);
-    
-    //内側の線を描画
-    {
-        //円の範囲
-        R -= 2;
-        CGRect rectEllipse = CGRectMake(cx - R, cy - R, R*2, R*2);
-        CGContextSetRGBStrokeColor  (context, 1.0, 1.0, 1.0, 1.0);
-        CGContextSetLineWidth       (context, 1.0);
-        CGContextStrokeEllipseInRect(context, rectEllipse);
-    }
+    //    //内側の線を描画
+    //    {
+    //        //円の範囲
+    //        R -= 2;
+    //        CGRect rectEllipse = CGRectMake(cx - R, cy - R, R*2, R*2);
+    //        CGContextSetRGBStrokeColor  (context, 1.0, 1.0, 1.0, 1.0);
+    //        CGContextSetLineWidth       (context, 1.0);
+    //        CGContextStrokeEllipseInRect(context, rectEllipse);
+    //    }
     
     {   //icon を描画
         if (_icon) {

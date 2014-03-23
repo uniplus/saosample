@@ -31,8 +31,8 @@
 - (id)initWithFrame:(CGRect)frame color:(UIColor*)color title:(NSString*)title textColor:(UIColor*)textColor forKey:(NSString*)key;
 - (id)initWithFrame:(CGRect)frame color:(UIColor*)color icon:(UIImage*)icon forKey:(NSString*)key;
 
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color;
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon forKey:(NSString*)key selectedColor:(UIColor*)color;
-+(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color;
++(SVFCircleView*)circleViewWithRect:(CGRect)rect title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor;
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon forKey:(NSString*)key selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor;
++(SVFCircleView*)circleViewWithRect:(CGRect)rect icon:(UIImage*)icon title:(NSString*)title forKey:(NSString*)key textColor:(UIColor*)textColor selectedColor:(UIColor*)color cirecleColor:(UIColor*)cirecleColor;
 
 @end

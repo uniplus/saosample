@@ -70,7 +70,14 @@
     for (NSDictionary* dict in _menuItems) {
         NSLog(@"dict[%@]",dict);
         SVFCircleView* itemBtn=nil;
-        itemBtn = [SVFCircleView circleViewWithRect:CGRectMake(0, offsetY, itemSize, itemSize) icon:[dict objectForKey:@"icon"] title:[dict objectForKey:@"title"] forKey:[dict objectForKey:@"key"] textColor:[UIColor whiteColor] selectedColor:[UIColor orangeColor]];
+        itemBtn = [SVFCircleView circleViewWithRect:CGRectMake(0, offsetY, itemSize, itemSize)
+                                               icon:[dict objectForKey:@"icon"]
+                                              title:[dict objectForKey:@"title"]
+                                             forKey:[dict objectForKey:@"key"]
+                                          textColor:[UIColor whiteColor]
+                                      selectedColor:[UIColor orangeColor]
+                                       cirecleColor:[UIColor grayColor]
+                   ];
         if (itemBtn) {
             [self addSubview:itemBtn];
             offsetY += itemSize + padding;
